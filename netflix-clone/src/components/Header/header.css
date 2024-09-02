@@ -46,3 +46,9 @@
     align-items: center;
     list-style: none;
 }
+
+@media  (max-width: 900px) {
+    .header_left ul > :not(:first-child){
+        display: none;
+    } 
+  }

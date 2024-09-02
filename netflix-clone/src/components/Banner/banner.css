@@ -20,8 +20,6 @@
     font-weight: 600;
     padding-bottom: 16px;
     font-family: 'Poppins';
-
-
 }
 .banner_buttons button{
     cursor: pointer;
@@ -64,4 +62,10 @@
     left: 0;
     right: 0;
     top: 0;
+}
+
+@media  (max-width:500px) {
+    .banner_description{
+        width: 95%;
+    }
 }
