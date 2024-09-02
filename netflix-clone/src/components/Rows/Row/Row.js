@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './row.css'
-import { Link } from 'react-router-dom'
 //import axios from '../../../utils/axios'
 
 function Row({fetchlink,gener,original}) {
@@ -19,6 +18,7 @@ const fetchrowmoive = async () => {
 useEffect(()=>{fetchrowmoive()},[fetchlink])
 
 
+console.log(movies)
   return (
     <div>
         <div className='row'>
@@ -26,11 +26,9 @@ useEffect(()=>{fetchrowmoive()},[fetchlink])
             <div className='movies'>
             {movies.map((movie)=>{
                 const {backdrop_path,poster_path , id , title, original_name} = movie
-               
+                if (!backdrop_path) return null; // Skip movie if no image
                 return <div className='moviecontainer'>
-                            <Link to={`/movies/${id}/${gener=='Netflix Originals'?'tv':'movie'}`}>
-                                <img  key={id} src={`${baseurl}${original?backdrop_path:poster_path}`} className={ original?'orginals ':'movie'}/>
-                            </Link>
+                            <img key={id} src={`${baseurl}${original?backdrop_path:poster_path}`} className={original?'orginals':'movie'}/>
         
                             {original?<h3 className='title'>{title || original_name}</h3>:null}         
                             {original?<div className='overlay'></div>:null}         

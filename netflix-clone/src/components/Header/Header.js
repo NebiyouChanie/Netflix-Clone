@@ -5,16 +5,14 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import logo from '../../assets/Netflix_Logo.png'
-
-
 function Header() {
   return (
     <div className='header_outer_container'>
         <div className='header_container'>
             <div className='header_left'>
                 <ul>
-                    <li><a href='/'><img src={logo} alt='Netflix Logo' width="100"/></a></li>
-                    <li><a href='/'>Home</a></li>
+                    <li><img src={logo} alt='Netflix Logo' width="100"/></li>
+                    <li>Home</li>
                     <li>TV shows</li>
                     <li>Movies</li>
                     <li>Latest</li>
