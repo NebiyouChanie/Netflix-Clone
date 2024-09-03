@@ -13,8 +13,8 @@ function Header() {
         <div className='header_container'>
             <div className='header_left'>
                 <ul>
-                    <li><a href='/'><img src={logo} alt='Netflix Logo' width="100"/></a></li>
-                    <li><a href='/'>Home</a></li>
+                    <li><a href='/Netflx-Clone'><img src={logo} alt='Netflix Logo' width="100"/></a></li>
+                    <li><a href='/Netflix-Clone'>Home</a></li>
                     <li>TV shows</li>
                     <li>Movies</li>
                     <li>Latest</li>
