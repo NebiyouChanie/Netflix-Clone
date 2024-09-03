@@ -5,6 +5,7 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import logo from '../../assets/Netflix_Logo.png'
+import { Link } from 'react-router-dom';
 
 
 function Header() {
@@ -13,8 +14,8 @@ function Header() {
         <div className='header_container'>
             <div className='header_left'>
                 <ul>
-                    <li><a href='/Netflix-Clone'><img src={logo} alt='Netflix Logo' width="100"/></a></li>
-                    <li><a href='/Netflix-Clone'>Home</a></li>
+                    <li><Link to='/Netflix-Clone'><img src={logo} alt='Netflix Logo' width="100"/></Link></li>
+                    <li><Link to='/Netflix-Clone'>Home</Link></li>
                     <li>TV shows</li>
                     <li>Movies</li>
                     <li>Latest</li>
