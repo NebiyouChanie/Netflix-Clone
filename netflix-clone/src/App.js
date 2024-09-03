@@ -10,7 +10,7 @@ import SharedElements from './SharedElements/SharedElements';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Netflix-Clone">
       <ScrollToTop />
         <div className="App">
             <Routes>
