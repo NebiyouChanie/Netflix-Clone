@@ -6,19 +6,21 @@ import MovieDetail from './components/MovieDetails/MovieDetail';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import SharedElements from './SharedElements/SharedElements';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
         <div className="App">
-          <Header />
             <Routes>
-              <Route path='/' element={<Home />}/>
-              <Route path='/movies/:id/:mediatype' element={<MovieDetail />}/>
+              <Route path='/' element={<SharedElements />}>
+                <Route path='/' element={<Home />}/>
+                <Route path='/movies/:id/:mediatype' element={<MovieDetail />}/>
+              </Route>
               <Route path='*' element={<FouroFour />}/> 
             </Routes>
-          <Footer />
+          
         </div>
     </Router>
     
