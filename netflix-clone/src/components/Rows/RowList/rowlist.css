@@ -1,0 +1,9 @@
+.rowlist{
+    padding: 16px;
+}
+
+@media  (min-width: 1024px) {
+    .rowlist{
+        padding: 32px;
+    }
+}
