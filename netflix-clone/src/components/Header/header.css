@@ -12,43 +12,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*bac*/
+    width: 100%;
     background-color: rgb(20, 20, 20 );
-    /**/
     height: 10vh;
     color: white;
     transition: all 0.5s ease-in;
     z-index: 100;
-    /**/
 }
 .nav_black{
     background-color: rgb(20, 20, 20);
 }
 .header_container{
-    width: 90%;
+    width: 100%;
+    margin-inline: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*background-color:yellow*/
 }
-
+.header_left ul > :not(:first-child){
+    display: none;
+} 
 .header_left ul{
     display: flex;
-    width: 140%;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-.header_right ul{
-    display: flex;
-    width: 140%;
+    width: 100%;
+    gap: 16px;
     justify-content: space-between;
     align-items: center;
     list-style: none;
 }
 
-@media  (max-width: 900px) {
+.header_right ul{
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+@media  (min-width: 1024px) {
     .header_left ul > :not(:first-child){
-        display: none;
+        display: block;
     } 
+    .header_container{
+        margin-inline: 32px;
+    }
   }
