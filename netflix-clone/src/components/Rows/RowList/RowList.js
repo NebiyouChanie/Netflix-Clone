@@ -1,10 +1,11 @@
 import React from 'react'
 import Row from '../Row/Row'
+import './rowlist.css'
 import requests from '../../../utils/requests'
 
 function RowList() {
   return (
-    <div style={{padding:"32px"}}>
+    <div className='rowlist'>
         <Row  fetchlink={requests.fetchTrending} gener={"Trending"} original={false}/>
         <Row  fetchlink={requests.fetchNetflixOriginals} gener={"Netflix Originals"} original={true}/>
         <Row  fetchlink={requests.fetchActionMovies} gener={"Action"} original={false}/>
